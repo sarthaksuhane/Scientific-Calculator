@@ -16,16 +16,13 @@ def sc(event):
 	text=key['text']
 	no=e.get()
 	result=''
-	if text=='deg':
-		result=str(m.degrees(float(no)))
+	radians = float(no) * (m.pi / 180)
 	if text=='sin':
-		result=str(m.sin(float(no)))
+		result=str(m.sin(radians))
 	if text=='cos':
-		result=str(m.cos(float(no)))
+		result=str(m.cos(radians))
 	if text=='tan':
-		result=str(m.tan(float(no)))
-	if text=='lg':
-		result=str(m.log10(float(no)))
+		result=str(m.tan(radians))
 	if text=='ln':
 		result=str(m.log(float(no)))
 	if text=='Sqrt':
@@ -66,16 +63,12 @@ def evaluate():
 
 lg = Button(root, text="log", padx=29, pady=10, relief=RAISED, bg="Black", fg="White")
 lg.bind("<Button-1>", sc)
-ln = Button(root, text="ln", padx=29, pady=10, relief=RAISED, bg="Black", fg="White")
-ln.bind("<Button-1>", sc)
 par1st = Button(root, text="(", padx=29, pady=10, relief=RAISED, bg="Black", fg="White",command=lambda: click("("))
 par2nd = Button(root, text=")", padx=30, pady=10, relief=RAISED, bg="Black", fg="White",command=lambda: click(")"))
 dot = Button(root, text=".", padx=29, pady=10, relief=RAISED, bg="Black", fg="White",command=lambda: click("."))
 
 exp = Button(root, text="^", padx=29, pady=10, relief=RAISED, bg="Black", fg="White", command=lambda: click("**"))
 
-degb = Button(root, text="deg", padx=23, pady=10, relief=RAISED, bg="Black", fg="White")
-degb.bind("<Button-1>", sc)
 e_b = Button(root, text="e", padx=29, pady=10, relief=RAISED, bg="Black", fg="White")
 e_b.bind("<Button-1>", sc)
 sinb= Button(root, text="sin", padx=24, pady=10, relief=RAISED, bg="Black", fg="White",)
@@ -155,11 +148,5 @@ one.grid(row=6, column=1)
 two.grid(row=6, column=2)
 three.grid(row=6, column=3)
 plus.grid(row=6, column=4)
-
-# e_b.grid(row=7, column=1)
-# zero.grid(row=7, column=2)
-# equal.grid(row=7, column=3)
-
-
 
 root.mainloop()
