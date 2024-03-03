@@ -91,7 +91,7 @@ fact.bind("<Button-1>", sc)
 seven = Button(root, text="7", padx=30, pady=10, relief=RAISED, bg="Light Green", fg="Black",command=lambda: click("7"))
 eight = Button(root, text="8", padx=29, pady=10, relief=RAISED, bg="Light Green", fg="Black",command=lambda: click("8"))
 nine = Button(root, text="9", padx=29, pady=10, relief=RAISED, bg="Light Green", fg="Black",command=lambda: click("9"))
-mult = Button(root, text="*", padx=29, pady=10, relief=RAISED, bg="Black", fg="White",command=lambda: click(""))
+mult = Button(root, text="*", padx=29, pady=10, relief=RAISED, bg="Black", fg="White",command=lambda: click("*"))
 
 frac = Button(root, text="1/x", padx=25, pady=10, relief=RAISED, bg="Black", fg="White")
 frac.bind("<Button-1>", sc)
